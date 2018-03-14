@@ -16,6 +16,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
     </spring:beans>
     <db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" password="whishworks_123" database="MySQL" doc:name="MySQL Configuration"/>
     <jms:activemq-connector name="Active_MQ" brokerURL="tcp://localhost:61616" validateConnections="true" doc:name="Active MQ" password="admin" username="admin"/>
+    
     <flow name="mavenFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
         <set-payload value="#['Hello Maven']" doc:name="Set Payload"/>
